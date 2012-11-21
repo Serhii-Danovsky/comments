@@ -1,0 +1,8 @@
+<%= comment.body %>
+<%= link_to "Reply", new_comment_comment_path(comment) %>
+<%= link_to "Destroy", article_comment_path(comment.commentable, comment), :method => :delete %>
+<br />
+<% margin = 30 %>    
+<div style="margin-left:<%= margin %>px;"> <%= render :partial => comment.comments, :collection => comment.comments %>
+</div>    
+<% margin += 30 %>
